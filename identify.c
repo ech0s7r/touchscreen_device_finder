@@ -14,7 +14,7 @@
 #define test_bit(bit, array) (array[bit/8] & (1<<(bit%8)))
 
 
-int is_touch_screen(unsigned char *abs_bitmask, unsigned char *key_bitmask){
+void is_touch_screen(unsigned char *abs_bitmask, unsigned char *key_bitmask){
 	// See if this is a touch pad.
 	// Is this a new modern multi-touch driver?
 	if (test_bit(ABS_MT_POSITION_X, abs_bitmask)
